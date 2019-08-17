@@ -5,9 +5,9 @@
 package auth
 
 import (
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/db"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/db"
 	"regexp"
 	"strings"
 )

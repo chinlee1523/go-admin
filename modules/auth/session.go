@@ -6,11 +6,11 @@ package auth
 
 import (
 	"encoding/json"
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/db"
-	"github.com/chenhg5/go-admin/modules/db/dialect"
-	"github.com/chenhg5/go-admin/plugins/admin/modules"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/db"
+	"github.com/chinlee1523/go-admin/modules/db/dialect"
+	"github.com/chinlee1523/go-admin/plugins/admin/modules"
 	"net/http"
 	"time"
 )

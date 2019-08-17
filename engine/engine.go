@@ -5,10 +5,10 @@
 package engine
 
 import (
-	"github.com/chenhg5/go-admin/adapter"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/plugins"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/adapter"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/plugins"
+	"github.com/chinlee1523/go-admin/template/types"
 )
 
 // Engine is the core component of goAdmin. It has two attributes.

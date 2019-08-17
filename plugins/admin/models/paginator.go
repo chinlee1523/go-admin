@@ -1,9 +1,9 @@
 package models
 
 import (
-	template2 "github.com/chenhg5/go-admin/template"
-	"github.com/chenhg5/go-admin/template/components"
-	"github.com/chenhg5/go-admin/template/types"
+	template2 "github.com/chinlee1523/go-admin/template"
+	"github.com/chinlee1523/go-admin/template/components"
+	"github.com/chinlee1523/go-admin/template/types"
 	"html/template"
 	"math"
 	"strconv"

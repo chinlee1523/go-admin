@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/auth"
-	"github.com/chenhg5/go-admin/plugins/admin/models"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/auth"
+	"github.com/chinlee1523/go-admin/plugins/admin/models"
 	"net/http"
 )
 

@@ -6,12 +6,12 @@ package page
 
 import (
 	"bytes"
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/auth"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/menu"
-	"github.com/chenhg5/go-admin/template"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/auth"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/menu"
+	"github.com/chinlee1523/go-admin/template"
+	"github.com/chinlee1523/go-admin/template/types"
 	"strings"
 )
 

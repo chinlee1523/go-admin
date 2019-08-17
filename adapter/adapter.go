@@ -5,8 +5,8 @@
 package adapter
 
 import (
-	"github.com/chenhg5/go-admin/plugins"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/plugins"
+	"github.com/chinlee1523/go-admin/template/types"
 )
 
 // WebFrameWork is a interface which is used as an adapter of

@@ -6,13 +6,13 @@ Call the ```Content``` method of the engine:
 package main
 
 import (
-	_ "github.com/chenhg5/go-admin/adapter/gin"
-	"github.com/chenhg5/go-admin/engine"
-	"github.com/chenhg5/go-admin/examples/datamodel"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/plugins/admin"
-	"github.com/chenhg5/go-admin/plugins/example"
-	"github.com/chenhg5/go-admin/template/types"
+	_ "github.com/chinlee1523/go-admin/adapter/gin"
+	"github.com/chinlee1523/go-admin/engine"
+	"github.com/chinlee1523/go-admin/examples/datamodel"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/plugins/admin"
+	"github.com/chinlee1523/go-admin/plugins/example"
+	"github.com/chinlee1523/go-admin/template/types"
 	"github.com/gin-gonic/gin"
 )
 
@@ -49,9 +49,9 @@ The ```Content``` method will write the content to the ```context``` of the fram
 package datamodel
 
 import (
-	"github.com/chenhg5/go-admin/modules/config"
-	template2 "github.com/chenhg5/go-admin/template"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/modules/config"
+	template2 "github.com/chinlee1523/go-admin/template"
+	"github.com/chinlee1523/go-admin/template/types"
 	"html/template"
 )
 
@@ -79,6 +79,6 @@ func GetContent() types.Panel {
 }
 ```
 
-[Back to Contents](https://github.com/chenhg5/go-admin/blob/master/docs/en/index.md)<br>
-[Previous: Admin Plugin](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/plugins/admin.md)<br>
-[Next page: Modules Introduction](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/modules.md)
+[Back to Contents](https://github.com/chinlee1523/go-admin/blob/master/docs/en/index.md)<br>
+[Previous: Admin Plugin](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/plugins/admin.md)<br>
+[Next page: Modules Introduction](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/modules.md)

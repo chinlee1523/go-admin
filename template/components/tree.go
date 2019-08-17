@@ -1,8 +1,8 @@
 package components
 
 import (
-	"github.com/chenhg5/go-admin/modules/menu"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/modules/menu"
+	"github.com/chinlee1523/go-admin/template/types"
 	"html/template"
 )
 

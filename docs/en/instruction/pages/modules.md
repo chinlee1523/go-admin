@@ -21,9 +21,9 @@ type Panel struct {
 package datamodel
 
 import (
-	"github.com/chenhg5/go-admin/modules/config"
-	template2 "github.com/chenhg5/go-admin/template"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/modules/config"
+	template2 "github.com/chinlee1523/go-admin/template"
+	"github.com/chinlee1523/go-admin/template/types"
 	"html/template"
 )
 
@@ -76,6 +76,6 @@ type RowAttribute interface {
 }
 ```
 
-[Back to Contents](https://github.com/chenhg5/go-admin/blob/master/docs/en/index.md)<br>
-[Previous: Page Customization](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/pages.md)<br>
-[Next: Page Components](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/components.md)
+[Back to Contents](https://github.com/chinlee1523/go-admin/blob/master/docs/en/index.md)<br>
+[Previous: Page Customization](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/pages.md)<br>
+[Next: Page Components](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/components.md)

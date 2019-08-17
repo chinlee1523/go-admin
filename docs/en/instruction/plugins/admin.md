@@ -31,7 +31,7 @@ Use the included command line tools to help you quickly generate configuration f
 - Installation
 
 ```bash
-go install github.com/chenhg5/go-admin/admincli
+go install github.com/chinlee1523/go-admin/admincli
 ```
 
 - Generation
@@ -58,7 +58,7 @@ After generating the configuration file, you need to set the route to access the
 ```go
 package datamodel
 
-import "github.com/chenhg5/go-admin/plugins/admin/models"
+import "github.com/chinlee1523/go-admin/plugins/admin/models"
 
 // The key of Generators is the prefix of table info url.
 // The corresponding value is the Form and Table data.
@@ -78,11 +78,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	_ "github.com/chenhg5/go-admin/adapter/gin" // adapter must be imported, if not - you have to implement it yourself
-	"github.com/chenhg5/go-admin/engine"
-	"github.com/chenhg5/go-admin/plugins/admin"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/examples/datamodel"
+	_ "github.com/chinlee1523/go-admin/adapter/gin" // adapter must be imported, if not - you have to implement it yourself
+	"github.com/chinlee1523/go-admin/engine"
+	"github.com/chinlee1523/go-admin/plugins/admin"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/examples/datamodel"
 )
 
 func main() {
@@ -112,8 +112,8 @@ Configuration file can looks like:
 package main
 
 import (
-	"github.com/chenhg5/go-admin/template/types"
-	"github.com/chenhg5/go-admin/plugins/admin/models"
+	"github.com/chinlee1523/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/plugins/admin/models"
 )
 
 func GetUsersTable() (usersTable models.Table) {
@@ -221,7 +221,7 @@ For example:
 
 ```go
 
-import "github.com/chenhg5/go-admin/template/types/form"
+import "github.com/chinlee1523/go-admin/template/types/form"
 
 ...
 FormType: form.File,
@@ -264,6 +264,6 @@ The return value of the filter function is the default value displayed by the fi
 In the table, you can customize the html return.
 In the form, for non-selected form types, you **must** return `string`. For single-select, multi-select, etc., select form type, return `[]string`.
 
-[Back to Contents](https://github.com/chenhg5/go-admin/blob/master/docs/en/index.md)<br>
-[Previous: Plugins](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/plugins/plugins.md)<br>
-[Next page: Custom page](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/pages.md)
+[Back to Contents](https://github.com/chinlee1523/go-admin/blob/master/docs/en/index.md)<br>
+[Previous: Plugins](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/plugins/plugins.md)<br>
+[Next page: Custom page](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/pages.md)

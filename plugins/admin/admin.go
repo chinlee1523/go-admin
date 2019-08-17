@@ -1,12 +1,12 @@
 package admin
 
 import (
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/db"
-	"github.com/chenhg5/go-admin/plugins"
-	"github.com/chenhg5/go-admin/plugins/admin/controller"
-	"github.com/chenhg5/go-admin/plugins/admin/models"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/db"
+	"github.com/chinlee1523/go-admin/plugins"
+	"github.com/chinlee1523/go-admin/plugins/admin/controller"
+	"github.com/chinlee1523/go-admin/plugins/admin/models"
 )
 
 type Admin struct {

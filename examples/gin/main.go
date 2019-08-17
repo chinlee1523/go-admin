@@ -1,16 +1,16 @@
 package main
 
 import (
-	_ "github.com/chenhg5/go-admin/adapter/gin"
-	"github.com/chenhg5/go-admin/engine"
-	"github.com/chenhg5/go-admin/examples/datamodel"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/db"
-	"github.com/chenhg5/go-admin/modules/language"
-	"github.com/chenhg5/go-admin/plugins/admin"
-	"github.com/chenhg5/go-admin/plugins/example"
-	"github.com/chenhg5/go-admin/template/adminlte"
-	"github.com/chenhg5/go-admin/template/types"
+	_ "github.com/chinlee1523/go-admin/adapter/gin"
+	"github.com/chinlee1523/go-admin/engine"
+	"github.com/chinlee1523/go-admin/examples/datamodel"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/db"
+	"github.com/chinlee1523/go-admin/modules/language"
+	"github.com/chinlee1523/go-admin/plugins/admin"
+	"github.com/chinlee1523/go-admin/plugins/example"
+	"github.com/chinlee1523/go-admin/template/adminlte"
+	"github.com/chinlee1523/go-admin/template/types"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 )

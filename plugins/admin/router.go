@@ -1,10 +1,10 @@
 package admin
 
 import (
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/auth"
-	"github.com/chenhg5/go-admin/plugins/admin/controller"
-	"github.com/chenhg5/go-admin/template"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/auth"
+	"github.com/chinlee1523/go-admin/plugins/admin/controller"
+	"github.com/chinlee1523/go-admin/template"
 )
 
 func InitRouter(prefix string) *context.App {

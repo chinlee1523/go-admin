@@ -5,8 +5,8 @@
 package types
 
 import (
-	"github.com/chenhg5/go-admin/modules/auth"
-	"github.com/chenhg5/go-admin/modules/menu"
+	"github.com/chinlee1523/go-admin/modules/auth"
+	"github.com/chinlee1523/go-admin/modules/menu"
 	"html/template"
 )
 

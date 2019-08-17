@@ -6,10 +6,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/db"
-	_ "github.com/chenhg5/go-admin/modules/db/mysql"
-	_ "github.com/chenhg5/go-admin/modules/db/postgresql"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/db"
+	_ "github.com/chinlee1523/go-admin/modules/db/mysql"
+	_ "github.com/chinlee1523/go-admin/modules/db/postgresql"
 	cli "github.com/jawher/mow.cli"
 	"github.com/mgutz/ansi"
 	"github.com/schollz/progressbar"
@@ -333,8 +333,8 @@ func generateFile(table string, conn db.Connection, fieldField, typeField, packa
 	content := `package ` + packageName + `
 
 import (
-	"github.com/chenhg5/go-admin/plugins/admin/models"
-	"github.com/chenhg5/go-admin/template/types"	
+	"github.com/chinlee1523/go-admin/plugins/admin/models"
+	"github.com/chinlee1523/go-admin/template/types"	
 )
 
 func Get` + strings.Title(table) + `Table() models.Table {
@@ -407,7 +407,7 @@ func generateTables(outputPath string, tables []string, packageName string) {
 
 	content := `package ` + packageName + `
 
-import "github.com/chenhg5/go-admin/plugins/admin/models"
+import "github.com/chinlee1523/go-admin/plugins/admin/models"
 
 // The key of Generators is the prefix of table info url.
 // The corresponding value is the Form and Table data.

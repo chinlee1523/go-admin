@@ -1,8 +1,8 @@
 # Go-admin Documentation
 
-- [How to use, go-admin introduction](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/instruction.md)
-    - [How to use plugins](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/plugins/plugins.md)
-        - [Admin plugin: configuration, generation, data management](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/plugins/admin.md)
+- [How to use, go-admin introduction](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/instruction.md)
+    - [How to use plugins](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/plugins/plugins.md)
+        - [Admin plugin: configuration, generation, data management](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/plugins/admin.md)
             - Quick start
                 - Generate a configuration file using admincli
                 - Set access routing
@@ -20,12 +20,12 @@
                     - Multiple selection
                     - Icon drop-down selection box
                 - Info
-    - [Page customization](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/pages.md)
-        - [Page modules](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/modules.md)
+    - [Page customization](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/pages.md)
+        - [Page modules](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/modules.md)
             - Panel
             - Row
             - Column
-        - [Page components](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/pages/components.md)
+        - [Page components](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/pages/components.md)
             - InfoBox
             - Button
             - BarChart
@@ -40,8 +40,8 @@
             - Image
             - Form
             - Tabs
-    - [Set the menu](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/menus.md)
-    - [Set up administrators, manage roles and permissions](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/rcba.md)
+    - [Set the menu](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/menus.md)
+    - [Set up administrators, manage roles and permissions](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/rcba.md)
 
 - Participate in development
     - Develop a plugin
@@ -54,8 +54,8 @@
         - Adapter introduction
         - Implement the Use method
         - Implement the Content method
-    - [Develop a theme template](https://github.com/chenhg5/go-admin/blob/master/docs/en/development/template/template.md)
-        - [Component development](https://github.com/chenhg5/go-admin/blob/master/docs/en/development/template/components.md)
+    - [Develop a theme template](https://github.com/chinlee1523/go-admin/blob/master/docs/en/development/template/template.md)
+        - [Component development](https://github.com/chinlee1523/go-admin/blob/master/docs/en/development/template/components.md)
         - Form component development
         - Static resource processing
         - Use templates

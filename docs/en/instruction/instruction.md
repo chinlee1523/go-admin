@@ -4,7 +4,7 @@ Go-admin makes it easy to use in various web frameworks through various adapters
 
 ## Example
 
-Import ```$GOPATH/github.com/chenhg5/go-admin/examples/datamodel/admin.sql``` into the database.
+Import ```$GOPATH/github.com/chinlee1523/go-admin/examples/datamodel/admin.sql``` into the database.
 
 Gin example:
 
@@ -13,11 +13,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	_ "github.com/chenhg5/go-admin/adapter/gin" // adapter must be imported, if not - you have to implement it yourself
-	"github.com/chenhg5/go-admin/engine"
-	"github.com/chenhg5/go-admin/plugins/admin"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/examples/datamodel"
+	_ "github.com/chinlee1523/go-admin/adapter/gin" // adapter must be imported, if not - you have to implement it yourself
+	"github.com/chinlee1523/go-admin/engine"
+	"github.com/chinlee1523/go-admin/plugins/admin"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/examples/datamodel"
 )
 
 func main() {
@@ -50,7 +50,7 @@ func main() {
 		LANGUAGE: "en",
 	}
 
-	// Generators： see https://github.com/chenhg5/go-admin/blob/master/examples/datamodel/tables.go
+	// Generators： see https://github.com/chinlee1523/go-admin/blob/master/examples/datamodel/tables.go
 	adminPlugin := admin.NewAdmin(datamodel.Generators)
 
 	// Add configuration and plugins, call the `Use` method to mount to the web framework
@@ -68,7 +68,7 @@ The corresponding steps are annotated, the use is very simple, only need to:
 - Set up plugins and configurations
 - Mount to the web framework
 
-More examples: [https://github.com/chenhg5/go-admin/tree/master/examples](https://github.com/chenhg5/go-admin/tree/master/examples)
+More examples: [https://github.com/chinlee1523/go-admin/tree/master/examples](https://github.com/chinlee1523/go-admin/tree/master/examples)
 
 ## Configuration
 
@@ -131,5 +131,5 @@ type Config struct {
 
 ```
 
-[Back to Contents](https://github.com/chenhg5/go-admin/blob/master/docs/en/index.md)<br>
-[Next: Plugins](https://github.com/chenhg5/go-admin/blob/master/docs/en/instruction/plugins/plugins.md)
+[Back to Contents](https://github.com/chinlee1523/go-admin/blob/master/docs/en/index.md)<br>
+[Next: Plugins](https://github.com/chinlee1523/go-admin/blob/master/docs/en/instruction/plugins/plugins.md)

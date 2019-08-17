@@ -1,14 +1,14 @@
 package controller
 
 import (
-	"github.com/chenhg5/go-admin/context"
-	"github.com/chenhg5/go-admin/modules/auth"
-	"github.com/chenhg5/go-admin/modules/config"
-	"github.com/chenhg5/go-admin/modules/logger"
-	"github.com/chenhg5/go-admin/modules/menu"
-	"github.com/chenhg5/go-admin/plugins/admin/models"
-	"github.com/chenhg5/go-admin/template"
-	"github.com/chenhg5/go-admin/template/types"
+	"github.com/chinlee1523/go-admin/context"
+	"github.com/chinlee1523/go-admin/modules/auth"
+	"github.com/chinlee1523/go-admin/modules/config"
+	"github.com/chinlee1523/go-admin/modules/logger"
+	"github.com/chinlee1523/go-admin/modules/menu"
+	"github.com/chinlee1523/go-admin/plugins/admin/models"
+	"github.com/chinlee1523/go-admin/template"
+	"github.com/chinlee1523/go-admin/template/types"
 	"github.com/go-sql-driver/mysql"
 	"github.com/mgutz/ansi"
 	template2 "html/template"
