@@ -202,11 +202,11 @@ func getTablesFromSqlResult(models []map[string]interface{}, driver string, dbNa
 	tables := make([]string, 0)
 
 	for i := 0; i < len(models); i++ {
-		if models[i][key].(string) != "goadmin_menu" && models[i][key].(string) != "goadmin_operation_log" &&
-			models[i][key].(string) != "goadmin_permissions" && models[i][key].(string) != "goadmin_role_menu" &&
-			models[i][key].(string) != "goadmin_roles" && models[i][key].(string) != "goadmin_session" &&
-			models[i][key].(string) != "goadmin_users" && models[i][key].(string) != "goadmin_role_permissions" &&
-			models[i][key].(string) != "goadmin_role_users" && models[i][key].(string) != "goadmin_user_permissions" {
+		if models[i][key].(string) != "yunyun_menu" && models[i][key].(string) != "yunyun_operation_log" &&
+			models[i][key].(string) != "yunyun_permissions" && models[i][key].(string) != "yunyun_role_menu" &&
+			models[i][key].(string) != "yunyun_roles" && models[i][key].(string) != "yunyun_session" &&
+			models[i][key].(string) != "yunyun_users" && models[i][key].(string) != "yunyun_role_permissions" &&
+			models[i][key].(string) != "yunyun_role_users" && models[i][key].(string) != "yunyun_user_permissions" {
 			tables = append(tables, models[i][key].(string))
 		}
 	}

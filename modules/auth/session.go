@@ -107,7 +107,7 @@ func InitSession(ctx *context.Context) *Session {
 type MysqlDriver struct{}
 
 func (driver *MysqlDriver) Load(sid string) map[string]interface{} {
-	sesModel, _ := db.Table("goadmin_session").Where("sid", "=", sid).First()
+	sesModel, _ := db.Table("yunyun_session").Where("sid", "=", sid).First()
 
 	if sesModel == nil {
 		return map[string]interface{}{}
@@ -121,18 +121,18 @@ func (driver *MysqlDriver) Load(sid string) map[string]interface{} {
 func (driver *MysqlDriver) Update(sid string, values map[string]interface{}) {
 	if sid != "" {
 		if len(values) == 0 {
-			_ = db.Table("goadmin_session").Where("sid", "=", sid).Delete()
+			_ = db.Table("yunyun_session").Where("sid", "=", sid).Delete()
 			return
 		}
 		valuesByte, _ := json.Marshal(values)
-		sesModel, _ := db.Table("goadmin_session").Where("sid", "=", sid).First()
+		sesModel, _ := db.Table("yunyun_session").Where("sid", "=", sid).First()
 		if sesModel == nil {
-			_, _ = db.Table("goadmin_session").Insert(dialect.H{
+			_, _ = db.Table("yunyun_session").Insert(dialect.H{
 				"values": string(valuesByte),
 				"sid":    sid,
 			})
 		} else {
-			_, _ = db.Table("goadmin_session").
+			_, _ = db.Table("yunyun_session").
 				Where("sid", "=", sid).
 				Update(dialect.H{
 					"values": string(valuesByte),

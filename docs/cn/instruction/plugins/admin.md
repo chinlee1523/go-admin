@@ -40,7 +40,7 @@ go install github.com/chinlee1523/go-admin/admincli
 - 生成
 
 ```bash
-admincli generate -h=127.0.0.1 -p=3306 -u=root -P=root -pa=main -n=goadmin -o=./
+admincli generate -h=127.0.0.1 -p=3306 -u=root -P=root -pa=main -n=yunyun -o=./
 
 -h  host
 -p  端口

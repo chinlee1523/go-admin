@@ -396,21 +396,21 @@ func (tb DefaultTable) DeleteDataFromDatabase(id string) {
 	for _, id := range idArr {
 		tb.delete(tb.form.Table, "id", id)
 	}
-	if tb.form.Table == "goadmin_roles" {
-		tb.delete("goadmin_role_users", "role_id", id)
-		tb.delete("goadmin_role_permissions", "role_id", id)
-		tb.delete("goadmin_role_menu", "role_id", id)
+	if tb.form.Table == "yunyun_roles" {
+		tb.delete("yunyun_role_users", "role_id", id)
+		tb.delete("yunyun_role_permissions", "role_id", id)
+		tb.delete("yunyun_role_menu", "role_id", id)
 	}
-	if tb.form.Table == "goadmin_users" {
-		tb.delete("goadmin_role_users", "user_id", id)
-		tb.delete("goadmin_user_permissions", "user_id", id)
+	if tb.form.Table == "yunyun_users" {
+		tb.delete("yunyun_role_users", "user_id", id)
+		tb.delete("yunyun_user_permissions", "user_id", id)
 	}
-	if tb.form.Table == "goadmin_permissions" {
-		tb.delete("goadmin_role_permissions", "permission_id", id)
-		tb.delete("goadmin_user_permissions", "permission_id", id)
+	if tb.form.Table == "yunyun_permissions" {
+		tb.delete("yunyun_role_permissions", "permission_id", id)
+		tb.delete("yunyun_user_permissions", "permission_id", id)
 	}
-	if tb.form.Table == "goadmin_menu" {
-		tb.delete("goadmin_role_menu", "menu_id", id)
+	if tb.form.Table == "yunyun_menu" {
+		tb.delete("yunyun_role_menu", "menu_id", id)
 	}
 }
 

@@ -34,7 +34,7 @@ func main() {
 			PORT:         "3306",
 			USER:         "root",
 			PWD:          "root",
-			NAME:         "goadmin",
+			NAME:         "yunyun",
 			MAX_IDLE_CON: 50,
 			MAX_OPEN_CON: 150,
 			DRIVER:       "mysql",

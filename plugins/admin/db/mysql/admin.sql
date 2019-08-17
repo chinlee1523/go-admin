@@ -20,12 +20,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table goadmin_menu
+# Dump of table yunyun_menu
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_menu`;
+DROP TABLE IF EXISTS `yunyun_menu`;
 
-CREATE TABLE `goadmin_menu` (
+CREATE TABLE `yunyun_menu` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT '0',
   `order` int(11) NOT NULL DEFAULT '0',
@@ -37,10 +37,10 @@ CREATE TABLE `goadmin_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_menu` WRITE;
-/*!40000 ALTER TABLE `goadmin_menu` DISABLE KEYS */;
+LOCK TABLES `yunyun_menu` WRITE;
+/*!40000 ALTER TABLE `yunyun_menu` DISABLE KEYS */;
 
-INSERT INTO `goadmin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`)
 VALUES
 	(2,0,2,'管理','fa-tasks','',NULL,NULL),
 	(3,2,3,'管理员管理','fa-users','/info/manager',NULL,NULL),
@@ -51,16 +51,16 @@ VALUES
 	(12,0,2,'用户表','fa-tasks','/info/user',NULL,NULL),
 	(13,0,1,'仪表盘','fa-tasks','/','2018-08-03 15:24:42',NULL);
 
-/*!40000 ALTER TABLE `goadmin_menu` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_operation_log
+# Dump of table yunyun_operation_log
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_operation_log`;
+DROP TABLE IF EXISTS `yunyun_operation_log`;
 
-CREATE TABLE `goadmin_operation_log` (
+CREATE TABLE `yunyun_operation_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -73,10 +73,10 @@ CREATE TABLE `goadmin_operation_log` (
   KEY `admin_operation_log_user_id_index` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_operation_log` WRITE;
-/*!40000 ALTER TABLE `goadmin_operation_log` DISABLE KEYS */;
+LOCK TABLES `yunyun_operation_log` WRITE;
+/*!40000 ALTER TABLE `yunyun_operation_log` DISABLE KEYS */;
 
-INSERT INTO `goadmin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`)
 VALUES
 	(1,1,'admin','GET','127.0.0.1','[]','2018-05-13 10:06:51','2018-05-13 10:06:51'),
 	(2,1,'admin','GET','127.0.0.1','{\"_pjax\":\"#pjax-container\"}','2018-05-13 10:06:57','2018-05-13 10:06:57'),
@@ -178,16 +178,16 @@ VALUES
 	(98,1,'admin','GET','127.0.0.1','{\"_pjax\":\"#pjax-container\"}','2018-06-13 08:42:03','2018-06-13 08:42:03'),
 	(99,1,'admin','GET','127.0.0.1','[]','2018-06-13 08:42:20','2018-06-13 08:42:20');
 
-/*!40000 ALTER TABLE `goadmin_operation_log` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_operation_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_permissions
+# Dump of table yunyun_permissions
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_permissions`;
+DROP TABLE IF EXISTS `yunyun_permissions`;
 
-CREATE TABLE `goadmin_permissions` (
+CREATE TABLE `yunyun_permissions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -199,10 +199,10 @@ CREATE TABLE `goadmin_permissions` (
   UNIQUE KEY `admin_permissions_name_unique` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_permissions` WRITE;
-/*!40000 ALTER TABLE `goadmin_permissions` DISABLE KEYS */;
+LOCK TABLES `yunyun_permissions` WRITE;
+/*!40000 ALTER TABLE `yunyun_permissions` DISABLE KEYS */;
 
-INSERT INTO `goadmin_permissions` (`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_permissions` (`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`)
 VALUES
 	(1,'All permission','*','','*',NULL,NULL),
 	(2,'Dashboard','dashboard','GET,PUT,POST,DELETE','/',NULL,NULL),
@@ -210,16 +210,16 @@ VALUES
 	(4,'User setting','auth.setting','GET,PUT','/auth/setting',NULL,NULL),
 	(5,'Auth management','auth.management','','/auth/roles\r\n/auth/permissions\r\n/auth/menu\r\n/auth/logs',NULL,NULL);
 
-/*!40000 ALTER TABLE `goadmin_permissions` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_role_menu
+# Dump of table yunyun_role_menu
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_role_menu`;
+DROP TABLE IF EXISTS `yunyun_role_menu`;
 
-CREATE TABLE `goadmin_role_menu` (
+CREATE TABLE `yunyun_role_menu` (
   `role_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -227,24 +227,24 @@ CREATE TABLE `goadmin_role_menu` (
   KEY `admin_role_menu_role_id_menu_id_index` (`role_id`,`menu_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_role_menu` WRITE;
-/*!40000 ALTER TABLE `goadmin_role_menu` DISABLE KEYS */;
+LOCK TABLES `yunyun_role_menu` WRITE;
+/*!40000 ALTER TABLE `yunyun_role_menu` DISABLE KEYS */;
 
-INSERT INTO `goadmin_role_menu` (`role_id`, `menu_id`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_role_menu` (`role_id`, `menu_id`, `created_at`, `updated_at`)
 VALUES
 	(1,2,NULL,NULL),
 	(1,11,NULL,NULL);
 
-/*!40000 ALTER TABLE `goadmin_role_menu` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_role_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_role_permissions
+# Dump of table yunyun_role_permissions
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_role_permissions`;
+DROP TABLE IF EXISTS `yunyun_role_permissions`;
 
-CREATE TABLE `goadmin_role_permissions` (
+CREATE TABLE `yunyun_role_permissions` (
   `role_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -252,23 +252,23 @@ CREATE TABLE `goadmin_role_permissions` (
   UNIQUE KEY `admin_role_permissions` (`role_id`,`permission_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_role_permissions` WRITE;
-/*!40000 ALTER TABLE `goadmin_role_permissions` DISABLE KEYS */;
+LOCK TABLES `yunyun_role_permissions` WRITE;
+/*!40000 ALTER TABLE `yunyun_role_permissions` DISABLE KEYS */;
 
-INSERT INTO `goadmin_role_permissions` (`role_id`, `permission_id`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_role_permissions` (`role_id`, `permission_id`, `created_at`, `updated_at`)
 VALUES
 	(1,1,NULL,NULL);
 
-/*!40000 ALTER TABLE `goadmin_role_permissions` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_role_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_role_users
+# Dump of table yunyun_role_users
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_role_users`;
+DROP TABLE IF EXISTS `yunyun_role_users`;
 
-CREATE TABLE `goadmin_role_users` (
+CREATE TABLE `yunyun_role_users` (
   `role_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -276,23 +276,23 @@ CREATE TABLE `goadmin_role_users` (
   UNIQUE KEY `admin_user_roles` (`role_id`,`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_role_users` WRITE;
-/*!40000 ALTER TABLE `goadmin_role_users` DISABLE KEYS */;
+LOCK TABLES `yunyun_role_users` WRITE;
+/*!40000 ALTER TABLE `yunyun_role_users` DISABLE KEYS */;
 
-INSERT INTO `goadmin_role_users` (`role_id`, `user_id`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_role_users` (`role_id`, `user_id`, `created_at`, `updated_at`)
 VALUES
 	(1,1,NULL,NULL);
 
-/*!40000 ALTER TABLE `goadmin_role_users` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_role_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_roles
+# Dump of table yunyun_roles
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_roles`;
+DROP TABLE IF EXISTS `yunyun_roles`;
 
-CREATE TABLE `goadmin_roles` (
+CREATE TABLE `yunyun_roles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -302,23 +302,23 @@ CREATE TABLE `goadmin_roles` (
   UNIQUE KEY `admin_roles_name_unique` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_roles` WRITE;
-/*!40000 ALTER TABLE `goadmin_roles` DISABLE KEYS */;
+LOCK TABLES `yunyun_roles` WRITE;
+/*!40000 ALTER TABLE `yunyun_roles` DISABLE KEYS */;
 
-INSERT INTO `goadmin_roles` (`id`, `name`, `slug`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_roles` (`id`, `name`, `slug`, `created_at`, `updated_at`)
 VALUES
 	(1,'Administrator','administrator','2018-05-13 10:00:33','2018-05-13 10:00:33');
 
-/*!40000 ALTER TABLE `goadmin_roles` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_user_permissions
+# Dump of table yunyun_user_permissions
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_user_permissions`;
+DROP TABLE IF EXISTS `yunyun_user_permissions`;
 
-CREATE TABLE `goadmin_user_permissions` (
+CREATE TABLE `yunyun_user_permissions` (
   `user_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -326,24 +326,24 @@ CREATE TABLE `goadmin_user_permissions` (
   UNIQUE KEY `admin_user_permissions` (`user_id`,`permission_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_user_permissions` WRITE;
-/*!40000 ALTER TABLE `goadmin_user_permissions` DISABLE KEYS */;
+LOCK TABLES `yunyun_user_permissions` WRITE;
+/*!40000 ALTER TABLE `yunyun_user_permissions` DISABLE KEYS */;
 
-INSERT INTO `goadmin_user_permissions` (`user_id`, `permission_id`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_user_permissions` (`user_id`, `permission_id`, `created_at`, `updated_at`)
 VALUES
 	(1,2,NULL,NULL),
 	(1,3,NULL,NULL);
 
-/*!40000 ALTER TABLE `goadmin_user_permissions` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_user_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_users
+# Dump of table yunyun_users
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_users`;
+DROP TABLE IF EXISTS `yunyun_users`;
 
-CREATE TABLE `goadmin_users` (
+CREATE TABLE `yunyun_users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -356,23 +356,23 @@ CREATE TABLE `goadmin_users` (
   UNIQUE KEY `admin_users_username_unique` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `goadmin_users` WRITE;
-/*!40000 ALTER TABLE `goadmin_users` DISABLE KEYS */;
+LOCK TABLES `yunyun_users` WRITE;
+/*!40000 ALTER TABLE `yunyun_users` DISABLE KEYS */;
 
-INSERT INTO `goadmin_users` (`id`, `username`, `password`, `name`, `avatar`, `remember_token`, `created_at`, `updated_at`)
+INSERT INTO `yunyun_users` (`id`, `username`, `password`, `name`, `avatar`, `remember_token`, `created_at`, `updated_at`)
 VALUES
 	(1,'admin','$2a$10$YDoHIAPcGpa3/Pm0f5Q/HeAlhOaRUgL.eyF8Ne/Mc1dp9esEQEV5e','admin','/uploads/R5JLbqE6kmAl4qFMQdSgPMjaBfQfj9KFsQ64WvbboKF5X5jmT6','tlNcBVK9AvfYH7WEnwB1RKvocJu8FfRy4um3DJtwdHuJy0dwFsLOgAc0xUfh','2018-05-13 10:00:33','2018-05-13 10:00:33');
 
-/*!40000 ALTER TABLE `goadmin_users` ENABLE KEYS */;
+/*!40000 ALTER TABLE `yunyun_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
-# Dump of table goadmin_session
+# Dump of table yunyun_session
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `goadmin_session`;
+DROP TABLE IF EXISTS `yunyun_session`;
 
-CREATE TABLE `goadmin_session` (
+CREATE TABLE `yunyun_session` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `sid` varchar(100) DEFAULT NULL,
   `values` varchar(3000) DEFAULT NULL,

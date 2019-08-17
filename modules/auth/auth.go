@@ -21,7 +21,7 @@ func Auth(ctx *context.Context) User {
 
 func Check(password string, username string) (user User, ok bool) {
 
-	admin, _ := db.Table("goadmin_users").Where("username", "=", username).First()
+	admin, _ := db.Table("yunyun_users").Where("username", "=", username).First()
 
 	if admin == nil {
 		ok = false
@@ -29,10 +29,10 @@ func Check(password string, username string) (user User, ok bool) {
 		if ComparePassword(password, admin["password"].(string)) {
 			ok = true
 
-			roleModel, _ := db.Table("goadmin_role_users").
-				LeftJoin("goadmin_roles", "goadmin_roles.id", "=", "goadmin_role_users.role_id").
+			roleModel, _ := db.Table("yunyun_role_users").
+				LeftJoin("yunyun_roles", "yunyun_roles.id", "=", "yunyun_role_users.role_id").
 				Where("user_id", "=", admin["id"]).
-				Select("goadmin_roles.id", "goadmin_roles.name", "goadmin_roles.slug").
+				Select("yunyun_roles.id", "yunyun_roles.name", "yunyun_roles.slug").
 				First()
 
 			user.ID = strconv.FormatInt(admin["id"].(int64), 10)
@@ -67,9 +67,9 @@ func Check(password string, username string) (user User, ok bool) {
 
 			user.Permissions = permissions
 
-			menuIdsModel, _ := db.Table("goadmin_role_menu").
-				LeftJoin("goadmin_menu", "goadmin_menu.id", "=", "goadmin_role_menu.menu_id").
-				Where("goadmin_role_menu.role_id", "=", roleModel["id"]).
+			menuIdsModel, _ := db.Table("yunyun_role_menu").
+				LeftJoin("yunyun_menu", "yunyun_menu.id", "=", "yunyun_role_menu.menu_id").
+				Where("yunyun_role_menu.role_id", "=", roleModel["id"]).
 				Select("menu_id", "parent_id").
 				All()
 
@@ -91,7 +91,7 @@ func Check(password string, username string) (user User, ok bool) {
 			user.Menus = menuIds
 
 			newPwd := EncodePassword([]byte(password))
-			_, _ = db.Table("goadmin_users").
+			_, _ = db.Table("yunyun_users").
 				Where("id", "=", user.ID).Update(dialect.H{
 				"password": newPwd,
 			})

@@ -104,17 +104,17 @@ func Filter(ctx *context.Context) (User, bool, bool) {
 }
 
 func GetCurUserById(id string) (user User, ok bool) {
-	admin, _ := db.Table("goadmin_users").Find(id)
+	admin, _ := db.Table("yunyun_users").Find(id)
 
 	if admin == nil {
 		ok = false
 		return
 	}
 
-	roleModel, _ := db.Table("goadmin_role_users").
-		LeftJoin("goadmin_roles", "goadmin_roles.id", "=", "goadmin_role_users.role_id").
+	roleModel, _ := db.Table("yunyun_role_users").
+		LeftJoin("yunyun_roles", "yunyun_roles.id", "=", "yunyun_role_users.role_id").
 		Where("user_id", "=", id).
-		Select("goadmin_roles.id", "goadmin_roles.name", "goadmin_roles.slug").
+		Select("yunyun_roles.id", "yunyun_roles.name", "yunyun_roles.slug").
 		First()
 
 	user.ID = id
@@ -148,9 +148,9 @@ func GetCurUserById(id string) (user User, ok bool) {
 
 	user.Permissions = permissions
 
-	menuIdsModel, _ := db.Table("goadmin_role_menu").
-		LeftJoin("goadmin_menu", "goadmin_menu.id", "=", "goadmin_role_menu.menu_id").
-		Where("goadmin_role_menu.role_id", "=", roleModel["id"]).
+	menuIdsModel, _ := db.Table("yunyun_role_menu").
+		LeftJoin("yunyun_menu", "yunyun_menu.id", "=", "yunyun_role_menu.menu_id").
+		Where("yunyun_role_menu.role_id", "=", roleModel["id"]).
 		Select("menu_id", "parent_id").
 		All()
 
@@ -177,10 +177,10 @@ func GetCurUserById(id string) (user User, ok bool) {
 }
 
 func GetPermissions(roleId interface{}) []map[string]interface{} {
-	permissions, _ := db.Table("goadmin_role_permissions").
-		LeftJoin("goadmin_permissions", "goadmin_permissions.id", "=", "goadmin_role_permissions.permission_id").
+	permissions, _ := db.Table("yunyun_role_permissions").
+		LeftJoin("yunyun_permissions", "yunyun_permissions.id", "=", "yunyun_role_permissions.permission_id").
 		Where("role_id", "=", roleId).
-		Select("goadmin_permissions.http_method", "goadmin_permissions.http_path").
+		Select("yunyun_permissions.http_method", "yunyun_permissions.http_path").
 		All()
 
 	return permissions

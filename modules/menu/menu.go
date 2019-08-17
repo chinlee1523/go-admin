@@ -72,7 +72,7 @@ func SetGlobalMenu(user auth.User) {
 	)
 
 	if user.IsSuperAdmin() {
-		menus, _ = db.Table("goadmin_menu").
+		menus, _ = db.Table("yunyun_menu").
 			Where("id", ">", 0).
 			OrderBy("order", "asc").
 			All()
@@ -83,7 +83,7 @@ func SetGlobalMenu(user auth.User) {
 			ids = append(ids, user.Menus[i])
 		}
 
-		menus, _ = db.Table("goadmin_menu").
+		menus, _ = db.Table("yunyun_menu").
 			WhereIn("id", ids).
 			OrderBy("order", "asc").
 			All()
@@ -149,7 +149,7 @@ func ConstructMenuTree(menus []map[string]interface{}, parentId int64) []Item {
 }
 
 func GetMenuItemById(id string) Item {
-	menu, _ := db.Table("goadmin_menu").Find(id)
+	menu, _ := db.Table("yunyun_menu").Find(id)
 
 	return Item{
 		Name:         menu["title"].(string),

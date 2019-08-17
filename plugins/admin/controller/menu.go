@@ -51,7 +51,7 @@ $('.icon').iconpicker({placement: 'bottomLeft'});
 // 删除菜单
 func DeleteMenu(ctx *context.Context) {
 
-	_ = db.Table("goadmin_menu").Where("id", "=", ctx.Query("id")).Delete()
+	_ = db.Table("yunyun_menu").Where("id", "=", ctx.Query("id")).Delete()
 
 	menu.SetGlobalMenu(auth.Auth(ctx))
 	ctx.Json(http.StatusOK, map[string]interface{}{
@@ -74,20 +74,20 @@ func EditMenu(ctx *context.Context) {
 	roles := ctx.Request.Form["roles[]"]
 
 	for _, roleId := range roles {
-		checkRoleMenu, _ := db.Table("goadmin_role_menu").
+		checkRoleMenu, _ := db.Table("yunyun_role_menu").
 			Where("role_id", "=", roleId).
 			Where("menu_id", "=", id).
 			First()
 
 		if checkRoleMenu == nil {
-			_, _ = db.Table("goadmin_role_menu").Insert(dialect.H{
+			_, _ = db.Table("yunyun_role_menu").Insert(dialect.H{
 				"menu_id": id,
 				"role_id": roleId,
 			})
 		}
 	}
 
-	_, _ = db.Table("goadmin_menu").
+	_, _ = db.Table("yunyun_menu").
 		Where("id", "=", id).Update(dialect.H{
 		"title":     title,
 		"parent_id": parentId,
@@ -115,7 +115,7 @@ func NewMenu(ctx *context.Context) {
 
 	user := auth.Auth(ctx)
 
-	id, _ := db.Table("goadmin_menu").Insert(dialect.H{
+	id, _ := db.Table("yunyun_menu").Insert(dialect.H{
 		"title":     title,
 		"parent_id": parentId,
 		"icon":      icon,
@@ -126,7 +126,7 @@ func NewMenu(ctx *context.Context) {
 	roles := ctx.Request.Form["roles[]"]
 
 	for _, roleId := range roles {
-		_, _ = db.Table("goadmin_role_menu").Insert(dialect.H{
+		_, _ = db.Table("yunyun_role_menu").Insert(dialect.H{
 			"menu_id": id,
 			"role_id": roleId,
 		})
@@ -150,14 +150,14 @@ func MenuOrder(ctx *context.Context) {
 	count := 1
 	for _, v := range data {
 		if child, ok := v["children"]; ok {
-			_, _ = db.Table("goadmin_menu").
+			_, _ = db.Table("yunyun_menu").
 				Where("id", "=", v["id"]).Update(dialect.H{
 				"order":     count,
 				"parent_id": 0,
 			})
 
 			for _, v2 := range child.([]interface{}) {
-				_, _ = db.Table("goadmin_menu").
+				_, _ = db.Table("yunyun_menu").
 					Where("id", "=", v2.(map[string]interface{})["id"]).Update(dialect.H{
 					"order":     count,
 					"parent_id": v["id"],
@@ -165,7 +165,7 @@ func MenuOrder(ctx *context.Context) {
 				count++
 			}
 		} else {
-			_, _ = db.Table("goadmin_menu").
+			_, _ = db.Table("yunyun_menu").
 				Where("id", "=", v["id"]).Update(dialect.H{
 				"order":     count,
 				"parent_id": 0,
